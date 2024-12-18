@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Log in page</h1>
+    <form method="post" action="/login">
+        <label for="username">Login (email): </label>
+        <input name="username" id="username"/>
+
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password"/>
+        <br/>
+        <input type="submit" value="Enter"/>
+    </form>
+    <div th:if="${param.error}" style="color: blue">
+        No such user exists!
+    </div>
+
+    <h4>Registration</h4>
+    <a th:href="@{/auth/register}" th:text="New_User_Registration">VAlUE</a>
+
+</body>
+</html>
