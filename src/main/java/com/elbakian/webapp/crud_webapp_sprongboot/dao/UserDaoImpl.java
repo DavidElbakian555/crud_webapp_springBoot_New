@@ -3,15 +3,14 @@ package com.elbakian.webapp.crud_webapp_sprongboot.dao;
 import com.elbakian.webapp.crud_webapp_sprongboot.models.*;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
-@Component
+@Repository
 public class UserDaoImpl {
 
     @PersistenceContext

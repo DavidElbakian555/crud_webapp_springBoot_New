@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <title>Edit</title>
 </head>
-<body>
-<form th:method="PATCH" th:action="@{/admin/users/{id}(id=${user.getId()})}" th:object="${user}">
-    <label for="name">Name: </label>
-    <input type="text" th:field="*{name}" id="name"/>
+    <body>
+    <form th:method="post" th:action="@{/admin/users/{id}(id=${user.getId()})}" th:object="${user}">
+        <input type="hidden" name="_method" value="PATCH" />
 
-    <label for="lastName">Last Name: </label>
-    <input type="text" th:field="*{lastName}" id="lastNAme"/>
+            <label for="name">Name: </label>
+            <input type="text" th:field="*{name}" id="name"/>
 
-    <label for="email">Email: </label>
-    <input type="text" th:field="*{email}" id="email"/>
+            <label for="lastName">Last Name: </label>
+            <input type="text" th:field="*{lastName}" id="lastNAme"/>
 
-    <br/>
-    <input type="submit" value="Save edit"/>
-</form>
-<br/>
-<a th:href="@{/auth/logout}" th:text="Log out">VAlUE</a>
-</body>
+            <label for="email">Email: </label>
+            <input type="text" th:field="*{email}" id="email"/>
+
+            <br/>
+            <input type="submit" value="Save_edit"/>
+        </form>
+        <br/>
+        <a th:href="@{/auth/logout}" th:text="Logout">VAlUE</a>
+    </body>
 </html>
